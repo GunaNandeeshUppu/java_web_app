@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/">Voting App</a>
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item <%= currPage == 'home' ? 'active' : '' %>">
+        <a class="nav-link" href="/">Home</a>
+      </li>
+      <% if(isAuthenticated) { %>
+      <li class="nav-item <%= currPage == 'userPolls' ? 'active' : '' %> dropdown">
+        <a class="nav-link dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="/user/polls">User</a>
+        <ul class="list-group dropdown-menu">
+          <a href='/user/polls' class='dropdown-item'>My Polls</a>
+          <a href='/logout' class='dropdown-item'>Logout</a>
+        </ul>
+      </li>
+      <li class="nav-item new-poll-btn <%= currPage == 'newPoll' ? 'active' : '' %>">
+        <a class="nav-link" href="/poll/create">New Poll</a>
+      </li>
+      <% } else { %>
+      <li class="nav-item">
+        <a class="nav-link" href="/auth/twitter">Twitter Login</a>
+      </li>
+      <% } %>
+
+    </ul>
+  </div>
+</nav>

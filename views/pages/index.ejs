@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <% include ../partials/head %>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <% include ../partials/header %>
+    </header>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-3 text-center">Voting App</h1>
+        <p class="lead text-center">Select a poll to see the results and vote, or sign-in to make a new poll.</p>
+      </div>
+    </div>
+
+
+    <ul class="list-group polls-container">
+      <% for(var i = 0; i < polls.length; i++) { %>
+      <a href='/poll/<%= polls[i]._id %>' class='list-group-item list-group-item-action'><%= polls[i].name %></a>
+      <% } %>
+    </ul>
+  </div>
+
+  <% include ../partials/footer %>
+
+</body>
+</html>
