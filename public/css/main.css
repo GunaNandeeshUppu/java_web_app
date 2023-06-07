@@ -1,0 +1,221 @@
+/********* Fonts **********/
+
+@font-face {
+	font-family: "Roboto";
+	font-style: normal;
+	font-weight: 400;
+	src: local("Roboto"), local("Roboto-Regular"),
+		url("../fonts/Roboto-Regular.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Roboto";
+	font-style: normal;
+	font-weight: 500;
+	src: local("Roboto Medium"), local("Roboto-Medium"),
+		url("../fonts/Roboto-Medium.ttf") format("truetype");
+}
+
+/****** Main Styling ******/
+
+body {
+	font-family: "Roboto", sans-serif;
+	font-size: 16px;
+	margin: 0;
+	padding: 0;
+	background: #f8f9fa;
+}
+
+header {
+	color: #00bcd4;
+	margin: 0 0 14px 0;
+	text-align: center;
+}
+
+p {
+	margin: 8px 0 0 0;
+}
+
+/****** Header Styling ******/
+
+.navbar {
+	padding: 20px 0;
+}
+
+@media (min-width: 992px) .navbar-expand-lg .navbar-nav .nav-link {
+	padding-right: 0;
+	padding-left: 1.7rem;
+}
+
+.menu {
+	text-decoration: none;
+	padding: 6px;
+	margin: 0;
+	color: #727272;
+}
+
+.menu:visited {
+	color: #727272;
+}
+
+.menu:hover {
+	color: #ffa000;
+}
+
+.menu:active {
+	color: #ff630d;
+}
+
+header a ~ p {
+	margin: 0;
+	padding: 0;
+	display: inline;
+	color: #eceff1;
+}
+
+#display-name {
+	font-weight: 400;
+}
+.dropdown-menu {
+	display: none;
+	position: relative;
+}
+.dropdown-btn:hover .dropdown-menu {
+	display: block;
+}
+
+/****** Login Styling ******/
+
+.login {
+	margin: 86px auto 0 auto;
+	text-align: center;
+}
+
+#login-btn {
+	width: 225px;
+	padding: 7px 5px;
+}
+
+.btn p {
+	margin: 8px 0 0 0;
+	padding: 0;
+}
+
+.btn > img {
+	float: left;
+	margin-left: 10px;
+}
+
+/****** Logo Div Styling ******/
+
+img {
+	margin: 0 auto;
+	display: block;
+}
+
+.clementine-text {
+	/* Styling for the Clementine.js text */
+	padding: 0;
+	margin: -25px 0 0 0;
+	font-weight: 500;
+	font-size: 60px;
+	color: #ffa000;
+}
+
+/****** Click Styling ******/
+
+.btn-container {
+	/* Styling for the div that contains the buttons */
+	margin: -10px auto 0 auto;
+	text-align: center;
+}
+
+.btn {
+	/* Styling for buttons */
+	margin: 0;
+	color: white;
+	background-color: #00bcd4;
+	display: inline-block;
+	border: 0;
+	font-size: 14px;
+	border-radius: 3px;
+	padding: 10px 5px;
+	width: 100px;
+	font-weight: 500;
+}
+
+.btn:focus {
+	/* Remove outline when hovering over button */
+	outline: none;
+}
+
+.btn:active {
+	/* Scale the button down by 10% when clicking on button */
+	transform: scale(0.9, 0.9);
+	-webkit-transform: scale(0.9, 0.9);
+	-moz-transform: scale(0.9, 0.9);
+}
+
+/********* My style ************/
+
+.jumbotron {
+	background-color: #f8f9fa;
+}
+
+.polls-container {
+	max-width: 600px;
+	margin: 0 auto;
+}
+#new-poll-form {
+	max-width: 600px;
+	margin: 0 auto;
+}
+.poll-name {
+	width: 90%;
+}
+.delete-btn {
+	width: 20px;
+	height: 20px;
+}
+
+.delete-btn:hover polygon {
+	fill: red;
+}
+
+.poll-container {
+	padding-top: 40px;
+}
+
+.poll-options {
+	margin-bottom: 20px;
+}
+
+.twitter-share-button {
+	margin-left: 20px;
+}
+
+.add-option-container {
+	margin-top: 20px;
+}
+
+.graph {
+	height: 360px;
+	width: 360px;
+	position: relative;
+	padding-left: 20px;
+}
+
+.tooltip {
+	background: #eee;
+	box-shadow: 0 0 5px #999999;
+	color: #333;
+	opacity: 0;
+	font-size: 12px;
+	left: 130px;
+	padding: 10px;
+	position: absolute;
+	text-align: center;
+	top: 95px;
+	width: 80px;
+	z-index: 10;
+}
